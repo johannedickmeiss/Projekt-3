@@ -10,59 +10,91 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header__logo">
-            <img src="Billeder/Logo.png" alt="Studio DMSS Logo">
-        </div>
-        <nav class="header__nav">
-            <ul class="header__menu">
-                <li class="header__menu-item"><a href="#forside" class="header__link">Hjem</a></li>
-                <li class="header__menu-item"><a href="#portfolio" class="header__link">Portfolio</a></li>
-                <li class="header__menu-item"><a href="#om-mig" class="header__link">Om mig</a></li>
-                <li class="header__menu-item"><a href="#kontakt" class="header__link">Kontakt</a></li>
+
+    <nav>
+        <nav class="header">
+            <ul class="sidebar">
+                <li onclick=hideSidebar() class="header__menu-item"><a href="#lukknap"><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="header__menu-item"><a href="#forside">Hjem</a></li>
+                <li class="header__menu-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="header__menu-item"><a href="#om-mig">Om mig</a></li>
+                <li class="header__menu-item"><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <ul>
+                <li><a href="#logo"><img src="Billeder/Logo.png" alt="header__logo" class="header__logo"></a></li>
+                <li class="hideOnMobile"><a href="#forside">Hjem</a></li>
+                <li class="hideOnMobile"><a href="#portfolio">Portfolio</a></li>
+                <li class="hideOnMobile"><a href="#om-mig">Om mig</a></li>
+                <li class="hideOnMobile"><a href="#kontakt">Kontakt</a></li>
+                <li class="menu-knap" onclick="showSidebar()">
+                    <a href="#menuknap">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#5f6368">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </nav>
 
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+
+        }
+       
+</script>
+
+
+   
+      
     <main>
-        <!-- Forside -->
-        <section class="forside">
-            <h1 class="forside__title">STUDIO DMSS</h1>
-        </section>
+    
+<!-- Forside -->
+<section class="forside">
+    <div><h1 class="forside__title">STUDIO DMSS</h1></div>
+</section>
 
     
 <!-- Velkommen -->
-<div class="velkommen__grid">
-    <div class="box velkommen__title">
+<div class="velkommen__grid grid">
+    <div class="velkommen__title">
         <h2>Velkommen</h2>
     </div>
-    <div class="box velkommen__text">
+    <div class="velkommen__text">
         <p>Jeg er multimediedesigner med fokus på at skabe visuelt engagerende og funktionelle løsninger. Gennem mine projekter kombinerer jeg design, teknologi og kreativitet for at levere unikke digitale oplevelser. Tak fordi du kiggede forbi – jeg ser frem til at dele mit arbejde med dig!</p>
     </div>
-    <div class="box velkommen__knapper">
-        <a href="#om-mig" class="velkommen__knap velkommen__knap--normal">Læs mere om mig</a>
-        <a href="#kontakt" class="velkommen__knap velkommen__knap--speciel">Kontakt</a>
+    <div class="velkommen__knapper">
+        <a href="#om-mig" class="knap">Læs mere om mig</a>
+        <a href="#kontakt" class="knap knap--speciel">Kontakt</a>
     </div>
-    <div class="box velkommen__billede">
-        <img src="Billeder/Untitled-1.jpg" alt="Illustration af mig">
+    <div class="velkommen__billede">
+        <img src="Billeder/Illustratorportræt.png" alt="Illustration af mig">
     </div>
 </div>
 
-
-  
-
 <!-- Udvalgte Projekter -->
-<section class="udvalgteprojekter">
-    <h2 class="udvalgteprojekter__title">Udvalgte Projekter</h2>
-    <div class="udvalgteprojekter__billeder">
-        <img src="Billeder/projekt1.jpg" alt="Projekt 1" class="projekter__item">
-        <img src="Billeder/projekt2.jpg" alt="Projekt 2" class="projekter__item">
-        <img src="Billeder/projekt3.jpg" alt="Projekt 3" class="projekter__item">
+<section class="udvalgteprojekter__grid grid">
+    <div class="udvalgteprojekter__title"><h3>Udvalgte Projekter</h3></div>
+    <div class="udvalgteprojekter__billede1">
+        <img src="Billeder/Produktfoto.jpg" alt="Projekt 1">
     </div>
-    <div class="udvalgteprojekter__button">
-        <a href="#portfolio" class="button button--secondary">Se Portfolio</a>
+    <div class="udvalgteprojekter__billede2">
+        <img src="Billeder/Produktfoto.jpg" alt="Projekt 2">
+    </div>
+    <div class="udvalgteprojekter__billede3">
+        <img src="Billeder/Produktfoto.jpg" alt="Projekt 3">
+    </div>
+    <div class="udvalgteprojekter__knap">
+        <a href="#portfolio" class="knap">Se Portfolio</a>
     </div>
 </section>
+
 
 
 <section class="kontakt">
