@@ -9,9 +9,7 @@
 @font-face {
   font-family: 'GlamourAbsolute';
   src: url('Fonts/fonnts.com-Glamour_Absolute_regular.ttf') format('truetype');
-  font-weight: lighter;
   font-style: normal;
-  letter-spacing: 4%;
 }
 
 * {
@@ -28,6 +26,7 @@ body {
 nav {
   background-color: rgba(242, 239, 234, 1);
   width: 100%;
+  position: fixed;
 }
 
 nav ul {
@@ -50,7 +49,7 @@ nav a {
   align-items: center;
   color: rgba(1, 64, 141, 1);
   font-family: 'GlamourAbsolute';
-  font-size: 16px;
+  font-size: 20px;
 }
 
 nav li:first-child {
@@ -114,6 +113,7 @@ h1 {
   font-size: 100px;
   color: rgba(1, 64, 141, 1);
   padding: 2% 0 2% 0;
+  padding-top: 100px;
 }
 
 h2 {
@@ -196,6 +196,9 @@ img {
   align-content: center;
   text-align: center;
   padding: 0 5%;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 15px;
 }
 
 /* Velkommen Sektion */
@@ -212,6 +215,7 @@ img {
   grid-column: 2;
   height: 100%;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 @media (max-width: 768px) {
@@ -296,9 +300,11 @@ img {
 .kontakt__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, fr);
+  grid-template-rows: repeat(6, auto);
   background-color: rgba(243, 215, 211, 1);
   margin-top: 5%;
+  width: 100%;
+  border-radius: 0px;
 }
 
 .kontakt__billede {
@@ -318,62 +324,96 @@ img {
   }
 }
 
-/* Footer */
+/* Footer Sektion */
 .footer__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: rgba(243, 215, 211, 1);
-  padding: 2%;
-}
-
-.footer__info, .footer__genveje {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(243, 196, 189);
   width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 0%;
 }
 
-.footer__info--title, .footer__genveje--title {
-  font-size: 24px;
-  text-align: left;
-  padding: 5%;
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer__info--text, .footer__genveje--list {
-  font-size: 16px;
-  line-height: 200%;
-  padding: 0 5% 5% 5%;
-  text-align: left;
+.footer__info--text {
+  font-family: 'AlegreyaSans';
+  font-size: 20px;
+  line-height: 150%;
+  margin: 5px 0;
 }
 
-.footer__genveje--list {
+.footer__genveje {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__genveje ul {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.footer__genveje--list a {
+.footer__genveje a {
   text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  color: rgba(1, 64, 141, 1);
+  font-family: 'GlamourAbsolute';
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.footer__genveje--item a {
+  color: rgba(224, 84, 49, 1);
 }
 
 @media (max-width: 768px) {
   .footer__container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    flex-direction: column;
+  }
+
+  .footer__info {
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .footer__genveje {
-    grid-row: 1;
+    flex-direction: column;
+    order: -1;
+    align-items: center;
+    width: 100%;
   }
 
-  .footer__genveje--list {
-    text-align: center;
+  .footer__genveje ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
   }
 
-  .footer__genveje--title {
-    text-align: center;
+  .footer__genveje--item {
+    margin-left: 0;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
   .footer__info--text {
-    text-align: center;
+    font-size: 16px;
   }
 
-  .footer__info--title {
-    text-align: center;
+  .footer__genveje a {
+    font-size: 16px;
   }
 }
