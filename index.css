@@ -20,7 +20,6 @@ body {
   min-height: 100vh;
   background-color: rgba(242, 239, 234, 1);
 }
-
 /* Navigation */
 nav {
   background-color: rgba(242, 239, 234, 1);
@@ -87,7 +86,6 @@ nav li:first-child{
   width: auto;
   height: 100px;
 }
-
 /* Skrift */
 h1, h2, h3{
   font-family: 'GlamourAbsolute';
@@ -102,12 +100,12 @@ h1 {
 h2 {
   font-size: 64px;
   color: rgba(231, 82, 52, 1);
-  padding: 10% 0 10% 0;
+  padding: 5% 0 5% 0;
 }
 h3 {
   font-size: 64px;
   color: rgba(1, 64, 141, 1);
-  padding: 10% 0 10% 0;
+  padding: 5% 0 5% 0;
 }
 p {
   font-family: 'AlegreyaSans';
@@ -128,7 +126,6 @@ p{
   font-size: 16px;
 }
 }
-
 /* Knapper */
 .knap {
   display: inline-block;
@@ -154,16 +151,15 @@ p{
     font-size: 16px;
   }
 }
-
 /* Billeder generelt */
 img {
   width: 100%; /* Gør billedet fylde hele bredden af gridet */
-  height: auto; /* Gør billedet fylde hele højden af gridet */
+  height: 100%;
   object-fit: cover; /* Dækker hele grid-området uden at forvrænge billedet */
+  object-position: center;
 }
-
 /* Grid generelt */
-.grid {
+.container {
   display: grid;
   box-sizing: border-box;
   place-items: center;
@@ -173,23 +169,27 @@ img {
   text-align: center;
   padding: 0 5%;
 }
-
 /* Velkommen Sektion */
-.velkommen__grid {
+.velkommen__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   background-color: rgba(243, 215, 211, 1);
+  padding: 0 0 0 5%;
 }
 .velkommen__billede {
   grid-row: 1 / 4; /* Gør at billedet strækker sig fra række 1 til række 4 (3 rækker) */
   grid-column: 2; /* Gør at billedet fylder hele kolonne 2 */
+  height: 100%;
+  overflow: hidden;
 }
+
 /* Mobil Velkommen */
 @media (max-width: 768px) {
-  .grid {
+  .velkommen__container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    padding: 0 5%;
   }
   .velkommen__billede {
     grid-column: 1;
@@ -198,38 +198,36 @@ img {
 
 }
 /* Udvalgte Projekter */
-.udvalgteprojekter__grid {
+.udvalgteprojekter__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 kolonner */
-  grid-template-rows: auto 1fr auto; /* 3 rækker: én til titel, én til billeder, én til knap */
-  box-sizing: border-box;
+  grid-template-rows: auto; /* 3 rækker: én til titel, én til billeder, én til knap */
   background-color: rgba(150, 173, 214, 1);
-  align-items: center;
   margin-top: 5%;
 }
 .udvalgteprojekter__title {
   grid-column: 1 / 4; /* Strækker sig over alle 3 kolonner */
 }
-.udvalgteprojekter__billede1, .udvalgteprojekter__billede2, .udvalgteprojekter__billede3 {
-  padding: 0 2% 0 2%;
-}
 .udvalgteprojekter__billede1 {
   grid-column: 1; /* Placeres i første kolonne */
+  padding: 0 5%;
 }
 .udvalgteprojekter__billede2 {
   grid-column: 2; /* Placeres i anden kolonne */
+  padding: 0 5%;
 }
 .udvalgteprojekter__billede3 {
   grid-column: 3; /* Placeres i tredje kolonne */
+  padding: 0 5%;
 }
 .udvalgteprojekter__knap {
   grid-column: 2; /* Placeres i anden (midterste) kolonne */
-  padding: 10% 0 10% 0;
+  padding: 10% 0;
+
 }
 /* Mobil udvalgte projekter */
-@media (max-width: 768px)
-{
-  .udvalgteprojekter__grid {
+@media (max-width: 768px){
+  .udvalgteprojekter__container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
@@ -237,7 +235,7 @@ img {
     grid-row: 1; /* Første række */
     grid-column: 1;
   }
-  .udvalgteprojekter__billede1 img {
+  .udvalgteprojekter__billede1 {
     grid-column: 1;
     grid-row: 2;
   }
@@ -256,12 +254,26 @@ img {
 }
 
 
-
-
-.kontakt__logo img {
-  grid-column: 1;
-  width: 100%; /* Billedet fylder hele kolonnen */
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px; /* Ens hjørner på logoet */
+/* Kontakt Sektion */
+.kontakt__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, fr);
+  background-color: rgba(243, 215, 211, 1);
+  margin-top: 5%;
+}
+.kontakt__billede {
+  grid-row: 1 / 6; /* Gør at billedet strækker sig fra række 1 til række 4 (3 rækker) */
+  grid-column: 2; /* Gør at billedet fylder hele kolonne 2 */
+}
+/* Mobil kontakt */
+@media (max-width: 768px) {
+  .kontakt__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .kontakt__billede {
+    grid-column: 1;
+    grid-row: 6;
+  }
 }
