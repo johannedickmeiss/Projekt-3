@@ -5,6 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'GlamourAbsolute';
   src: url('Fonts/fonnts.com-Glamour_Absolute_regular.ttf') format('truetype');
@@ -12,30 +13,36 @@
   font-style: normal;
   letter-spacing: 4%;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
+
 body {
   min-height: 100vh;
   background-color: rgba(242, 239, 234, 1);
 }
+
 /* Navigation */
 nav {
   background-color: rgba(242, 239, 234, 1);
   width: 100%;
 }
-nav ul{
+
+nav ul {
   width: 100%;
   list-style: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-nav li{
+
+nav li {
   height: 100px;
 }
-nav a{
+
+nav a {
   height: 100%; 
   padding: 0 30px;
   text-decoration: none;
@@ -43,11 +50,13 @@ nav a{
   align-items: center;
   color: rgba(1, 64, 141, 1);
   font-family: 'GlamourAbsolute';
-  font-size: 16x;
+  font-size: 16px;
 }
-nav li:first-child{
+
+nav li:first-child {
   margin-right: auto;
 }
+
 .sidebar {
   position: fixed; 
   top: 0;
@@ -57,75 +66,90 @@ nav li:first-child{
   z-index: 1000;
   background-color: rgba(243, 215, 211, 0.437);
   backdrop-filter: blur(20px);
-  display:  none;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start; 
 }
+
 .sidebar li {
   width: 100%; 
 }
+
 .sidebar a {
   width: 100%;
 }
+
 .menu-knap {
   display: none;
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
   .hideOnMobile {
     display: none;
   }
-  .menu-knap{
+
+  .menu-knap {
     display: block;
   }
 }
+
 .header__menu-item a[href="#kontakt"], .hideOnMobile a[href="#kontakt"] {
-  color: rgba(224, 84, 49, 1);/* Erstat denne farve med den ønskede farve */
+  color: rgba(224, 84, 49, 1);
 }
+
 .header__logo {
   width: auto;
   height: 100px;
 }
+
 /* Skrift */
-h1, h2, h3{
+h1, h2, h3, h4 {
   font-family: 'GlamourAbsolute';
   font-weight: lighter;
   text-align: center;
 }
+
 h1 {
   font-size: 100px;
   color: rgba(1, 64, 141, 1);
   padding: 2% 0 2% 0;
 }
+
 h2 {
   font-size: 64px;
   color: rgba(231, 82, 52, 1);
   padding: 5% 0 5% 0;
 }
+
 h3 {
   font-size: 64px;
   color: rgba(1, 64, 141, 1);
   padding: 5% 0 5% 0;
 }
+
 p {
   font-family: 'AlegreyaSans';
   font-size: 20px;
-  line-height: 24px;
-  text-align: left; /* Venstrestiller teksten */
+  line-height: 150%;
+  text-align: left;
   padding: 0 5% 5% 5%;
 }
+
 @media (max-width: 768px) {
-h1 {
-  font-size: 50px;
-}
-h2, h3 {
-  font-size: 36px;
+  h1 {
+    font-size: 50px;
+  }
+
+  h2, h3 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
 
-p{
-  font-size: 16px;
-}
-}
 /* Knapper */
 .knap {
   display: inline-block;
@@ -141,9 +165,11 @@ p{
   margin: 2px;
   text-decoration: none;
 }
+
 .knap--speciel {
   background-color: rgba(248, 184, 175, 1);
 }
+
 @media (max-width: 768px) {
   .knap {
     width: 120px;
@@ -151,13 +177,15 @@ p{
     font-size: 16px;
   }
 }
+
 /* Billeder generelt */
 img {
-  width: 100%; /* Gør billedet fylde hele bredden af gridet */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Dækker hele grid-området uden at forvrænge billedet */
+  object-fit: cover;
   object-position: center;
 }
+
 /* Grid generelt */
 .container {
   display: grid;
@@ -169,6 +197,7 @@ img {
   text-align: center;
   padding: 0 5%;
 }
+
 /* Velkommen Sektion */
 .velkommen__container {
   display: grid;
@@ -177,82 +206,91 @@ img {
   background-color: rgba(243, 215, 211, 1);
   padding: 0 0 0 5%;
 }
+
 .velkommen__billede {
-  grid-row: 1 / 4; /* Gør at billedet strækker sig fra række 1 til række 4 (3 rækker) */
-  grid-column: 2; /* Gør at billedet fylder hele kolonne 2 */
+  grid-row: 1 / 4;
+  grid-column: 2;
   height: 100%;
   overflow: hidden;
 }
 
-/* Mobil Velkommen */
 @media (max-width: 768px) {
   .velkommen__container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     padding: 0 5%;
   }
+
   .velkommen__billede {
     grid-column: 1;
     grid-row: 4;
   }
-
 }
+
 /* Udvalgte Projekter */
 .udvalgteprojekter__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 kolonner */
-  grid-template-rows: auto; /* 3 rækker: én til titel, én til billeder, én til knap */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   background-color: rgba(150, 173, 214, 1);
   margin-top: 5%;
 }
-.udvalgteprojekter__title {
-  grid-column: 1 / 4; /* Strækker sig over alle 3 kolonner */
-}
-.udvalgteprojekter__billede1 {
-  grid-column: 1; /* Placeres i første kolonne */
-  padding: 0 5%;
-}
-.udvalgteprojekter__billede2 {
-  grid-column: 2; /* Placeres i anden kolonne */
-  padding: 0 5%;
-}
-.udvalgteprojekter__billede3 {
-  grid-column: 3; /* Placeres i tredje kolonne */
-  padding: 0 5%;
-}
-.udvalgteprojekter__knap {
-  grid-column: 2; /* Placeres i anden (midterste) kolonne */
-  padding: 10% 0;
 
+.udvalgteprojekter__title {
+  grid-column: 1 / 4;
 }
-/* Mobil udvalgte projekter */
-@media (max-width: 768px){
+
+.udvalgteprojekter__billede1 {
+  grid-column: 1;
+  padding: 0 5%;
+}
+
+.udvalgteprojekter__billede2 {
+  grid-column: 2;
+  padding: 0 5%;
+}
+
+.udvalgteprojekter__billede3 {
+  grid-column: 3;
+  padding: 0 5%;
+}
+
+.udvalgteprojekter__knap {
+  grid-column: 2;
+  padding: 10% 0;
+}
+
+@media (max-width: 768px) {
   .udvalgteprojekter__container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+
   .udvalgteprojekter__title {
-    grid-row: 1; /* Første række */
+    grid-row: 1;
     grid-column: 1;
   }
+
   .udvalgteprojekter__billede1 {
     grid-column: 1;
     grid-row: 2;
   }
+
   .udvalgteprojekter__billede2 {
     grid-column: 1;
     grid-row: 3;
   }
+
   .udvalgteprojekter__billede3 {
     grid-column: 1;
     grid-row: 4;
   }
+
   .udvalgteprojekter__knap {
     grid-column: 1;
     grid-row: 5;
   }
 }
-
 
 /* Kontakt Sektion */
 .kontakt__container {
@@ -262,18 +300,80 @@ img {
   background-color: rgba(243, 215, 211, 1);
   margin-top: 5%;
 }
+
 .kontakt__billede {
-  grid-row: 1 / 6; /* Gør at billedet strækker sig fra række 1 til række 4 (3 rækker) */
-  grid-column: 2; /* Gør at billedet fylder hele kolonne 2 */
+  grid-row: 1 / 6;
+  grid-column: 2;
 }
-/* Mobil kontakt */
+
 @media (max-width: 768px) {
   .kontakt__container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+
   .kontakt__billede {
     grid-column: 1;
     grid-row: 6;
+  }
+}
+
+/* Footer */
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgba(243, 215, 211, 1);
+  padding: 2%;
+}
+
+.footer__info, .footer__genveje {
+  width: 100%;
+}
+
+.footer__info--title, .footer__genveje--title {
+  font-size: 24px;
+  text-align: left;
+  padding: 5%;
+}
+
+.footer__info--text, .footer__genveje--list {
+  font-size: 16px;
+  line-height: 200%;
+  padding: 0 5% 5% 5%;
+  text-align: left;
+}
+
+.footer__genveje--list {
+  list-style: none;
+}
+
+.footer__genveje--list a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .footer__genveje {
+    grid-row: 1;
+  }
+
+  .footer__genveje--list {
+    text-align: center;
+  }
+
+  .footer__genveje--title {
+    text-align: center;
+  }
+
+  .footer__info--text {
+    text-align: center;
+  }
+
+  .footer__info--title {
+    text-align: center;
   }
 }
