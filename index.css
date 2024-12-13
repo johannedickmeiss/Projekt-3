@@ -56,7 +56,7 @@ nav li:first-child {
   margin-right: auto;
 }
 
-.sidebar {
+.nav__sidepanel {
   position: fixed; 
   top: 0;
   right: 0;
@@ -71,36 +71,38 @@ nav li:first-child {
   justify-content: flex-start; 
 }
 
-.sidebar li {
+.nav__sidepanel li {
   width: 100%; 
 }
 
-.sidebar a {
+.nav__sidepanel a {
   width: 100%;
 }
 
-.menu-knap {
+.nav__menulinje--knap {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .hideOnMobile {
+  .nav__menulinje--item {
     display: none;
   }
 
-  .menu-knap {
+  .nav__menulinje--knap {
     display: block;
   }
 }
 
-.header__menu-item a[href="#kontakt"], .hideOnMobile a[href="#kontakt"] {
+.nav__sidepanel--item a[href="#kontakt"], .nav__menulinje--item a[href="#kontakt"] {
   color: rgba(224, 84, 49, 1);
 }
 
-.header__logo {
+.nav__menulinje--logo {
   width: auto;
   height: 100px;
 }
+
+
 
 /* Skrift */
 h1, h2, h3, h4 {
@@ -344,7 +346,7 @@ img {
 
 .footer__info--text {
   font-family: 'AlegreyaSans';
-  font-size: 20px;
+  font-size: 15px;
   line-height: 150%;
   margin: 5px 0;
 }
@@ -370,7 +372,6 @@ img {
   color: rgba(1, 64, 141, 1);
   font-family: 'GlamourAbsolute';
   font-size: 20px;
-  margin-right: 20px;
 }
 
 .footer__genveje--item a {
@@ -404,14 +405,12 @@ img {
 
   .footer__genveje--item {
     margin-left: 0;
-    margin-bottom: 15px;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .footer__info--text {
-    font-size: 16px;
-  }
+
 
   .footer__genveje a {
     font-size: 16px;
