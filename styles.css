@@ -1,0 +1,602 @@
+/* Fonte */
+@font-face {
+  font-family: 'AlegreyaSans';
+  src: url('Fonts/AlegreyaSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GlamourAbsolute';
+  src: url('Fonts/fonnts.com-Glamour_Absolute_regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgba(242, 239, 234, 1);
+}
+
+/* Navigation */
+nav {
+  background-color: rgba(242, 239, 234, 1);
+  width: 100%;
+  position: fixed;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 100px;
+}
+
+nav a {
+  height: 100%; 
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgba(1, 64, 141, 1);
+  font-family: 'GlamourAbsolute';
+  font-size: 20px;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.nav__sidepanel {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 1000;
+  background-color: rgba(243, 215, 211, 0.437);
+  backdrop-filter: blur(20px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; 
+}
+
+.nav__sidepanel li {
+  width: 100%; 
+}
+
+.nav__sidepanel a {
+  width: 100%;
+}
+
+.nav__menulinje--knap {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav__menulinje--item {
+    display: none;
+  }
+
+  .nav__menulinje--knap {
+    display: block;
+  }
+}
+
+.nav__sidepanel--item a[href="#kontakt"], .nav__menulinje--item a[href="#kontakt"] {
+  color: rgba(224, 84, 49, 1);
+}
+
+.nav__menulinje--logo {
+  width: auto;
+  height: 100px;
+}
+
+
+
+/* Skrift */
+h1, h2, h3, h4 {
+  font-family: 'GlamourAbsolute';
+  font-weight: lighter;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+  color: rgba(1, 64, 141, 1);
+  padding: 2% 0 2% 0;
+  padding-top: 100px;
+}
+
+h2 {
+  font-size: 64px;
+  color: rgba(231, 82, 52, 1);
+  padding: 5% 0 5% 0;
+}
+
+h3 {
+  font-size: 64px;
+  color: rgba(1, 64, 141, 1);
+  padding: 5% 0 5% 0;
+}
+
+p {
+  font-family: 'AlegreyaSans';
+  font-size: 20px;
+  line-height: 150%;
+  text-align: left;
+  padding: 0 5% 5% 5%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2, h3 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Knapper */
+.knap {
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 45px;
+  font-size: 24px;
+  font-family: 'GlamourAbsolute';
+  width: 180px;
+  text-align: center;
+  background-color: rgba(242, 239, 234, 1);
+  color: rgba(224, 84, 49, 1);
+  border: 1px solid rgba(224, 84, 49, 1);
+  margin: 2px;
+  text-decoration: none;
+}
+
+.knap--speciel {
+  background-color: rgba(248, 184, 175, 1);
+}
+
+@media (max-width: 768px) {
+  .knap {
+    width: 120px;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* Billeder generelt */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Grid generelt */
+.container {
+  display: grid;
+  box-sizing: border-box;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  text-align: center;
+  padding: 0 5%;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+/* Velkommen Sektion */
+.velkommen__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgba(243, 215, 211, 1);
+  padding: 0 0 0 5%;
+}
+
+.velkommen__billede {
+  grid-row: 1 / 4;
+  grid-column: 2;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+}
+
+@media (max-width: 768px) {
+  .velkommen__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 5%;
+  }
+
+  .velkommen__billede {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+/* Udvalgte Projekter */
+.udvalgteprojekter__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  background-color: rgba(150, 173, 214, 1);
+  margin-top: 5%;
+}
+
+.udvalgteprojekter__title {
+  grid-column: 1 / 4;
+}
+
+.udvalgteprojekter__billede1 {
+  grid-column: 1;
+  padding: 0 5%;
+}
+
+.udvalgteprojekter__billede2 {
+  grid-column: 2;
+  padding: 0 5%;
+}
+
+.udvalgteprojekter__billede3 {
+  grid-column: 3;
+  padding: 0 5%;
+}
+
+.udvalgteprojekter__knap {
+  grid-column: 2;
+  padding: 10% 0;
+}
+
+@media (max-width: 768px) {
+  .udvalgteprojekter__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .udvalgteprojekter__title {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .udvalgteprojekter__billede1 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .udvalgteprojekter__billede2 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .udvalgteprojekter__billede3 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .udvalgteprojekter__knap {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}
+
+/* Kontakt Sektion */
+.kontakt__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, auto);
+  background-color: rgba(243, 215, 211, 1);
+  margin-top: 5%;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.kontakt__billede {
+  grid-row: 1 / 6;
+  grid-column: 2;
+}
+
+@media (max-width: 768px) {
+  .kontakt__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .kontakt__billede {
+    grid-column: 1;
+    grid-row: 6;
+  }
+}
+
+/* Footer Sektion */
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(243, 196, 189);
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 0%;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer__info--text {
+  font-family: 'AlegreyaSans';
+  font-size: 15px;
+  line-height: 150%;
+  margin: 5px 0;
+}
+
+.footer__genveje {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__genveje ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__genveje a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  color: rgba(1, 64, 141, 1);
+  font-family: 'GlamourAbsolute';
+  font-size: 20px;
+}
+
+.footer__genveje--item a {
+  color: rgba(224, 84, 49, 1);
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer__info {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .footer__genveje {
+    flex-direction: column;
+    order: -1;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer__genveje ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .footer__genveje--item {
+    margin-left: 0;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .footer__genveje a {
+    font-size: 16px;
+  }
+}
+
+/* Projekt 1 Sektion */
+.projekt1__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgba(243, 215, 211, 1);
+  padding: 0%
+}
+.projekt1__billede {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.projekt1__text {
+  grid-row: 2 / 3;
+  grid-column: 2;
+}
+@media (max-width: 768px) {
+  .projekt1__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .projekt1__billede {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+/* Projekt 2 Sektion */
+.projekt2__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color:  rgba(150, 173, 214, 1);
+  padding: 0%;
+  margin-top: 5%;
+}
+.projekt2__billede {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.projekt2__text {
+  grid-row: 2 / 3;
+  grid-column: 2;
+}
+@media (max-width: 768px) {
+  .projekt2__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .projekt2__billede {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+/* Projekt 3 Sektion */
+.projekt3__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgba(243, 215, 211, 1);
+  padding: 0%;
+  margin-top: 5%;
+}
+.projekt3__billede {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.projekt3__text {
+  grid-row: 2 / 3;
+  grid-column: 2;
+}
+@media (max-width: 768px) {
+  .projekt3__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .projekt3__billede {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+/* Projekt 4 Sektion */
+.projekt4__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color:  rgba(150, 173, 214, 1);
+  padding: 0%;
+  margin-top: 5%;
+}
+.projekt4__billede {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.projekt4__text {
+  grid-row: 2 / 3;
+  grid-column: 2;
+}
+@media (max-width: 768px) {
+  .projekt4__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .projekt4__billede {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+/* Projekt 5 Sektion */
+.projekt5__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgba(243, 215, 211, 1);
+  padding: 0%;
+  margin-top: 5%;
+}
+.projekt5__billede {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.projekt5__text {
+  grid-row: 2 / 3;
+  grid-column: 2;
+}
+@media (max-width: 768px) {
+  .projekt5__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .projekt5__billede {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+/* Projekt 6 Sektion */
+.projekt6__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color:  rgba(150, 173, 214, 1);
+  padding: 0%;
+  margin-top: 5%;
+}
+.projekt6__billede {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.projekt6__text {
+  grid-row: 2 / 3;
+  grid-column: 2;
+}
+@media (max-width: 768px) {
+  .projekt6__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .projekt6__billede {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
