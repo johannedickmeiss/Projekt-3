@@ -1,0 +1,207 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Standard grid-layout */
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgba(243, 215, 211, 1);
+  padding: 0%;
+  margin-top: 5%;
+  box-sizing: border-box;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  width: 95%;
+  height: 100%;
+  padding: 0%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+  
+  .velkommen__container {
+    padding: 0 0 0 5%;
+  }
+
+  .udvalgteprojekter__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: rgba(150, 173, 214, 1);
+    margin-top: 5%;
+  }
+
+  .socialemedier__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(243, 215, 211, 1);
+    padding: 0%;
+  }
+
+  .produktfoto__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color:  rgba(150, 173, 214, 1);
+    padding: 0%;
+    margin-top: 5%;
+  }
+
+  .animation__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(243, 215, 211, 1);
+    padding: 0%;
+    margin-top: 5%;
+  }
+
+  .redesign__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(150, 173, 214, 1);
+    padding: 0%;
+    margin-top: 5%;
+  }
+
+  .illustratorportræt__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(243, 215, 211, 1);
+    padding: 0%;
+    margin-top: 5%;
+  }
+
+  .hvemerjeg__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color:  rgba(243, 215, 211, 1);
+    padding: 0%;
+    height: 550px;
+  
+  }
+
+  .kompetencer__container {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Titel, billeder, tekst */
+    background-color: rgba(150, 173, 214, 1);
+    padding: 20px;
+    margin-top: 5%;
+  
+  }
+
+  .kontakt__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto; /* Skaber 3 rækker baseret på indhold */
+    padding: 0%;
+    margin-bottom: 5%;
+  }
+
+  .kontakt__container1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr; /* Rækker til container1 */
+    background-color: rgba(243, 215, 211, 1);
+    border-radius: 15px 0 0 15px;
+    height: 550px;
+    align-items: center;
+  
+  }
+
+  .kontakt__container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr; /* Rækker til container1 */
+    background-color: rgba(150, 173, 214, 1);
+    border-radius: 0 15px 15px 0;
+    height: 550px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .merenysgerrig__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    background-color: rgba(243, 215, 211, 1);
+    margin-top: 5%;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(243, 215, 211, 1);
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 0%;
+  }
+
+
+
+
+  /* Fælles regler for alle containere */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Standard grid-layout */
+    grid-template-rows: 1fr 1fr 1fr; /* Standard grid-rows */
+    background-color: rgba(243, 215, 211, 1);
+    padding: 0%;
+    margin-top: 5%;
+  }
+  
+  /* Anvend container-common for de containere, der deler de samme stilarter */
+  .velkommen__container, 
+  .socialemedier__container, 
+  .animation__container, 
+  .redesign__container, 
+  .illustratorportræt__container, 
+  .hvemerjeg__container, 
+  .merenysgerrig__container {
+    background-color: rgba(243, 215, 211, 1); /* Brug den fælles baggrundsfarve */
+  }
+  
+  /* For containerne, der har specifik styling */
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(243, 215, 211, 1);
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 0%;
+  }
+  
+  .produktfoto__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(150, 173, 214, 1);
+    padding: 0%;
+    margin-top: 5%;
+  }
+  
+  .kontakt__container1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(243, 215, 211, 1);
+    border-radius: 15px 0 0 15px;
+    height: 550px;
+    align-items: center;
+  }
+  
+  .kontakt__container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: rgba(150, 173, 214, 1);
+    border-radius: 0 15px 15px 0;
+    height: 550px;
+    width: 100%;
+    align-items: center;
+  }
+  
