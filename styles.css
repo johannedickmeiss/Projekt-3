@@ -93,17 +93,68 @@ img {
 /* Container */
 .container {
   display: grid;
+  grid-template-columns: 1fr 1fr; /* Standard grid-layout */
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgba(243, 215, 211, 1);
+  margin-top: 5%;
   box-sizing: border-box;
   place-items: center;
-  width: 100%;
-  height: 100%;
   align-content: center;
   text-align: center;
-  padding: 0 5%;
   width: 95%;
-  margin: 0 auto;
+  height: 100%;
+  padding: 0%;
   border-radius: 15px;
+  margin: 5% auto;
+} 
+.udvalgteprojekter__container,  
+.produktfoto__container,  
+.kompetencer__container, 
+.redesign__container, 
+.movingart__container {
+    background-color: rgba(150, 173, 214, 1);
 }
+
+.velkommen__container, 
+.socialemedier__container, 
+.hvemerjeg__container, 
+.kontakt__container {
+  margin: 0% auto;
+}
+
+.ervietmatch__container, 
+.merenysgerrig__container {
+  width: 100%;
+  border-radius: 0px;
+  margin: 5% 0 0 0;
+}
+
+.footer__container {
+  margin: 0%;
+}
+
+.udvalgteprojekter__container {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+  .merenysgerrig__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    width: 100%;
+    border-radius: 0px;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px;
+    border-radius: 0%;
+  }
+
+
 /* NAVIGATION */
 nav {
   background-color: rgba(242, 239, 234, 1);
@@ -172,16 +223,6 @@ nav li:first-child {
   }
 }
 /* FOOTER */
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(243, 215, 211, 1);
-  width: 100%;
-  padding: 40px;
-  box-sizing: border-box;
-  border-radius: 0%;
-}
 .footer__info {
   display: flex;
   flex-direction: column;
@@ -253,13 +294,7 @@ nav li:first-child {
 
 /* FORSIDE */
 /* Velkommen */
-.velkommen__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: rgba(243, 215, 211, 1);
-  padding: 0 0 0 5%;
-}
+
 .velkommen__billede {
   grid-row: 1 / 4;
   grid-column: 2;
@@ -279,13 +314,7 @@ nav li:first-child {
   }
 }
 /* Udvalgte Projekter */
-.udvalgteprojekter__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  background-color: rgba(150, 173, 214, 1);
-  margin-top: 5%;
-}
+
 .udvalgteprojekter__title {
   grid-column: 1 / 4;
 }
@@ -331,15 +360,7 @@ nav li:first-child {
     grid-row: 5;
   }}
 /* Er vi et match? */
-.ervietmatch__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, auto);
-  background-color: rgba(243, 215, 211, 1);
-  margin-top: 5%;
-  width: 100%;
-  border-radius: 0px;
-}
+
 .ervietmatch__billede {
   grid-row: 1 / 6;
   grid-column: 2;
@@ -358,13 +379,7 @@ nav li:first-child {
 
 /* PORTFOLIO*/
 /* Sociale medier*/
-.socialemedier__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: rgba(243, 215, 211, 1);
-  padding: 0%;
-}
+
 .socialemedier__billede {
   grid-row: 1 / 4;
   grid-column: 1;
@@ -384,14 +399,7 @@ nav li:first-child {
   }
 }
 /* Produktfoto */
-.produktfoto__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color:  rgba(150, 173, 214, 1);
-  padding: 0%;
-  margin-top: 5%;
-}
+
 .produktfoto__billede {
   grid-row: 1 / 4;
   grid-column: 1;
@@ -411,14 +419,7 @@ nav li:first-child {
   }
 }
 /* Animation */
-.animation__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: rgba(243, 215, 211, 1);
-  padding: 0%;
-  margin-top: 5%;
-}
+
 .animation__animation {
   grid-row: 1 / 4;
   grid-column: 1;
@@ -453,14 +454,7 @@ nav li:first-child {
   }
 }
 /* Re-design af hjemmeside */
-.redesign__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: rgba(150, 173, 214, 1);
-  padding: 0%;
-  margin-top: 5%;
-}
+
 .redesign__billede {
   grid-row: 1 / 4;
   grid-column: 1;
@@ -479,14 +473,7 @@ nav li:first-child {
   }
 }
 /* illustrator portræt */
-.illustratorportræt__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: rgba(243, 215, 211, 1);
-  padding: 0%;
-  margin-top: 5%;
-}
+
 .illustratorportræt__billede {
   grid-row: 1 / 4;
   grid-column: 1;
@@ -504,15 +491,7 @@ nav li:first-child {
     grid-row: 3;
   }
 }
-/* movingart */
-.movingart__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color:  rgba(150, 173, 214, 1);
-  padding: 0%;
-  margin-top: 5%;
-}
+
 .movingart__billede {
   grid-row: 1 / 4;
   grid-column: 1;
@@ -539,15 +518,7 @@ nav li:first-child {
 
 /* OM MIG */
 /* Hvem er jeg? */
-.hvemerjeg__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color:  rgba(243, 215, 211, 1);
-  padding: 0%;
-  height: 550px;
 
-}
 .hvemerjeg__billede {
   grid-row: 1 / 4;
   grid-column: 1;
@@ -559,24 +530,16 @@ nav li:first-child {
 }
 @media (max-width: 768px) {
   .hvemerjeg__container {
-    height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    height: auto;
 
   }
   .hvemerjeg__billede {
     grid-column: 1;
     grid-row: 3;
   }
-}
-/* Kompetencer */
-.kompetencer__container {
-  display: grid;
-  grid-template-rows: auto auto auto; /* Titel, billeder, tekst */
-  background-color: rgba(150, 173, 214, 1);
-  padding: 20px;
-  margin-top: 5%;
+
+
 
 }
 .kompetencer__title {
@@ -636,82 +599,28 @@ nav li:first-child {
 }
 
 /* KONTAKT */
-/* Kontakt */
-.kontakt__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto; /* Skaber 3 rækker baseret på indhold */
-  padding: 0%;
-  margin-bottom: 5%;
-}
-.kontakt__container1 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr; /* Rækker til container1 */
-  background-color: rgba(243, 215, 211, 1);
-  border-radius: 15px 0 0 15px;
-  height: 550px;
-  align-items: center;
 
-}
-.kontakt__container1--title {
-  grid-column: 1;
-  grid-row: 1;
-}
-.kontakt__container1--text {
-  grid-column: 1;
-  grid-row: 2; /* Placering af p-elementet i række 2 */
-}
-.kontakt__container2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr; /* Rækker til container1 */
-  background-color: rgba(150, 173, 214, 1);
-  border-radius: 0 15px 15px 0;
-  height: 550px;
-  width: 100%;
-  align-items: center;
-}
-.kontakt__container2 h3 {
-  font-size: 24px;
-}
-.kontakt__container2--info {
-  grid-column: 1;
+.kontakt__billede {
   grid-row: 1 / 4;
-}
-@media (max-width: 768px){
-
-.kontakt__container {
-  grid-template-columns: 1fr; /* Kun én kolonne */
-  grid-template-rows: 3fr;
-}
-.kontakt__container1 {
-  border-radius: 15px 15px 0 0; /* Rundede hjørner på toppen */
-  height: auto;
-  grid-template-rows: 2fr;
-}
-.kontakt__container2 {
-  height: auto;
-  grid-template-rows: 1fr;
-  grid-column: 1; /* Strækker sig over én kolonne */
-  grid-row: 3; /* Placering af kontakt info efter container1 */
-  border-radius: 0 0 15px 15px; /* Rundede hjørner på bunden */
+  grid-column: 2;
 }
 
-.kontakt__container2 h3 {
+.kontakt__info h3 {
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .kontakt__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 5%;
+  }
+  .kontakt__billede {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }
-/* Mere nysgerrig? */
-.merenysgerrig__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, auto);
-  background-color: rgba(243, 215, 211, 1);
-  margin-top: 5%;
-  width: 100%;
-  border-radius: 0px;
-}
+
 .merenysgerrig__billede {
   grid-row: 1 / 6;
   grid-column: 2;
