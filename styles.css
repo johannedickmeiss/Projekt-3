@@ -95,7 +95,7 @@ img {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Standard grid-layout */
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   background-color: rgba(243, 215, 211, 1);
   margin-top: 5%;
   box-sizing: border-box;
@@ -282,6 +282,10 @@ nav li:first-child {
 /* FORSIDE */
 /* Velkommen */
 
+.velkommen__knapper {
+padding: 5%;
+}
+
 .velkommen__billede {
   grid-row: 1 / 4;
   grid-column: 2;
@@ -299,12 +303,15 @@ nav li:first-child {
     grid-column: 1;
     grid-row: 4;
   }
+
+  .velkommen__knapper {
+    padding: 0%;
+  }
 }
 /* Udvalgte Projekter */
 
 .udvalgteprojekter__title {
   grid-column: 1 / 4;
-  padding: 2%;
 }
 .udvalgteprojekter__billede1 {
   grid-column: 1;
@@ -349,6 +356,14 @@ nav li:first-child {
   }}
 /* Er vi et match? */
 
+.ervietmatch__container {
+  padding: 3%;
+}
+
+.ervietmatch__container p {
+  text-align: center;
+}
+
 .ervietmatch__billede {
   grid-row: 1 / 6;
   grid-column: 2;
@@ -368,6 +383,9 @@ nav li:first-child {
 
 /* PORTFOLIO*/
 /* Sociale medier*/
+.socialemedier__container p {
+  grid-row: 2 / 4;
+}
 
 .socialemedier__billede {
   grid-row: 1 / 4;
@@ -537,7 +555,6 @@ nav li:first-child {
 .kompetencer__container {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  height: 100%;
 
 
 }
@@ -554,7 +571,6 @@ nav li:first-child {
 .kompetencer__title {
   grid-column: 1 / 6;
   grid-row: 1;
-  padding: 2%;
 
 }
 .kompetencer__illustrator {
@@ -580,7 +596,7 @@ nav li:first-child {
 .kompetencer__knap {
   grid-column: 1 / 6;
   grid-row: 3;
-  padding: 5%
+  padding: 2%;
 }
 
 
@@ -636,8 +652,17 @@ nav li:first-child {
   grid-column: 2;
 }
 
+
 .kontakt__info h3 {
   font-size: 20px;
+}
+
+.merenysgerrig__container {
+  padding: 3%;
+}
+
+.merenysgerrig__container p{
+  text-align: center;
 }
 
 @media (max-width: 768px) {
