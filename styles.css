@@ -1,64 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;}
+body {
+  min-height: 100vh;
+  background-color: rgba(242, 239, 234, 1);}
+
+
 /* Fonte */
 @font-face {
   font-family: 'AlegreyaSans';
   src: url('Fonts/AlegreyaSans-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal;}
 @font-face {
   font-family: 'GlamourAbsolute';
   src: url('Fonts/fonnts.com-Glamour_Absolute_regular.ttf') format('truetype');
-  font-style: normal;
-}
+  font-style: normal;}
 
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  min-height: 100vh;
-  background-color: rgba(242, 239, 234, 1);
-}
 
-/* Skrift */
+  /* Skrift */
 h1, h2, h3, h4 {
   font-family: 'GlamourAbsolute';
   font-weight: lighter;
-  text-align: center;
-}
+  text-align: center;}
 h1 {
   font-size: 100px;
   color: rgba(1, 64, 141, 1);
   padding: 2% 0 2% 0;
-  padding-top: 100px;
-}
+  padding-top: 100px;}
 h2 {
   font-size: 64px;
   color: rgba(231, 82, 52, 1);
-  padding: 5% 0 5% 0;
-}
+  padding: 5% 0 5% 0;}
 h3 {
   font-size: 64px;
   color: rgba(1, 64, 141, 1);
-  padding: 5% 0 5% 0;
-}
+  padding: 5% 0 5% 0;}
 h4 {
   font-size: 20px;
   color: rgba(1, 64, 141, 1);
-  padding: 5% 0 5% 0;
-}
+  padding: 5% 0 5% 0;}
 p {
   font-family: 'AlegreyaSans';
   font-size: 20px;
   line-height: 150%;
   text-align: left;
-  padding: 0 5% 5% 5%;
-}
+  padding: 0 5% 5% 5%;}
 
-/* Containere */
+
+  /* Containere */
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Standard grid-layout */
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
   background-color: rgba(243, 215, 211, 1);
   margin-top: 5%;
@@ -70,98 +63,79 @@ p {
   height: 100%;
   padding: 2%;
   border-radius: 15px;
-  margin: 5% auto;
-} 
+  margin: 5% auto;} 
 .udvalgteprojekter__container,  
 .produktfoto__container,  
 .kompetencer__container, 
 .redesign__container, 
 .movingart__container {
-    background-color: rgba(150, 173, 214, 1);
-}
+    background-color: rgba(150, 173, 214, 1);}
 .velkommen__container, 
 .socialemedier__container, 
 .hvemerjeg__container, 
 .kontakt__container {
-  margin: 0% auto;
-}
-.velkommen__container, .illustratorportræt__container {
-  padding: 2% 2% 0 2%;
-}
+  margin: 0% auto;}
+.velkommen__container, .illustratorportraet__container {
+  padding: 2% 2% 0 2%;}
 .ervietmatch__container, 
 .merenysgerrig__container {
   width: 100%;
   border-radius: 0px;
-  margin: 5% 0 0 0;
-}
+  margin: 5% 0 0 0;}
 .merenysgerrig__container {
-  padding: 3%;
-}
+  padding: 3%;}
 .ervietmatch__container {
-  padding: 3%;
-}
+  padding: 3%;}
 .udvalgteprojekter__container {
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 2% 0 2%;
-}
+  padding: 0 2% 0 2%;}
 .footer__container {
   grid-template-rows: 1fr;
   width: 100%;
   margin: 0%;
-  border-radius: 0%;
-}
+  border-radius: 0%;}
 .kompetencer__container {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
+  grid-template-rows: auto;}
 
 
-/* Footer */
+  /* Footer */
 .footer__info {
   text-align: left;
-  width: 100%;
-}
+  width: 100%;}
 .footer__info p {
-  font-size: 15px;
-}
+  font-size: 15px;}
 .footer__genveje {
   text-align: right;
-  justify-self: end;
-}
+  justify-self: end;}
 .footer__genveje ul {
   list-style: none;
   display: grid;
   grid-auto-flow: column;
-  white-space: nowrap;
-}
+  white-space: nowrap;}
 .footer__genveje a {
   text-decoration: none;
   color: rgba(1, 64, 141, 1);
   font-family: 'GlamourAbsolute';
   font-size: 20px;
-  padding: 0 30px;
-}
-
+  padding: 0 30px;}
 .footer__genveje--item a {
-  color: rgba(224, 84, 49, 1);
-}
+  color: rgba(224, 84, 49, 1);}
 
-/* NAVIGATION */
+
+  /* NAVIGATION */
 nav {
   background-color: rgba(242, 239, 234, 1);
   width: 100%;
-  position: fixed;
-}
+  position: fixed;}
 nav ul {
   width: 100%;
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-}
+  align-items: center;}
 nav li {
-  height: 100px;
-}
+  height: 100px;}
 nav a {
   height: 100%; 
   padding: 0 30px;
@@ -170,15 +144,16 @@ nav a {
   align-items: center;
   color: rgba(1, 64, 141, 1);
   font-family: 'GlamourAbsolute';
-  font-size: 20px;
-}
-
+  font-size: 20px;}
 a:hover {
   transform: scale(1.1);}
-
 nav li:first-child {
-  margin-right: auto;
-}
+  margin-right: auto;}
+.nav__menulinje--logo {
+  height: 100px;
+  width: auto;}
+.nav__menulinje--logo img {
+  object-fit: contain;}
 .nav__sidepanel {
   position: fixed; 
   top: 0;
@@ -191,24 +166,16 @@ nav li:first-child {
   display: none;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start; 
-}
+  justify-content: flex-start; }
 .nav__sidepanel li {
-  width: 100%; 
-}
+  width: 100%; }
 .nav__sidepanel a {
-  width: 100%;
-}
+  width: 100%;}
 .nav__menulinje--knap {
-  display: none;
-}
+  display: none;}
 .nav__sidepanel--item a[href="kontakt.html"], .nav__menulinje--item a[href="kontakt.html"] {
-  color: rgba(224, 84, 49, 1);
-}
-.nav__menulinje--logo {
-  width: auto;
-  height: 100px;
-}
+  color: rgba(224, 84, 49, 1);}
+
 
 /* Billeder */
 img, 
@@ -222,8 +189,7 @@ img,
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 0;
-}
+  border-radius: 0;}
 .velkommen__billede,
 .socialemedier__billede,
 .produktfoto__billede,
@@ -233,40 +199,35 @@ img,
 .movingart__video {
   grid-row: 1 / 4;
   grid-column: 1;
-  overflow: hidden;
-}
+  overflow: hidden;}
 .udvalgteprojekter__billede1,
 .udvalgteprojekter__billede2,
 .udvalgteprojekter__billede3 {
-  padding: 2%;
-}
+  padding: 2%;}
 .movingart__video {
   grid-row: 1 / 4;
-  grid-column: 1;
-}
+  grid-column: 1;}
 .movingart__video video {
-  width: 95%;
-}
+  width: 95%;}
 .hvemerjeg__billede {
-  height: 95%;
-}
+  height: 95%;}
 .hvemerjeg__billede img {
-  border-radius: 50%;
-}
+  border-radius: 50%;}
 .animation__animation {
   grid-row: 1 / 4;
   grid-column: 1;
   width: 495px;
-  height: 500px;
+  height: 495px;
   background: url(Billeder/animationworkshop.jpg) 0 0 no-repeat;
   background-size: 7500px auto;
-  animation: play-desktop 3s steps(15) infinite;
-}
+  animation: play-desktop 3s steps(15) infinite;}
 .velkommen__billede, .kontakt__billede, .ervietmatch__billede {
   grid-column: 2;
   grid-row: 1 / 4;
-  height: 100%;
-}
+  height: 100%;}
+.illustratorportraet__billede, .produktfoto__billede {
+  height: 100%;}
+
 
 /* Knapper */
 .knap {
@@ -281,121 +242,95 @@ img,
   color: rgba(224, 84, 49, 1);
   border: 1px solid rgba(224, 84, 49, 1);
   margin: 2px;
-  text-decoration: none; 
-}
+  text-decoration: none; }
 .knap:hover {
   transform: scale(1.1);}
-
 .knap--speciel {
-  background-color: rgba(248, 184, 175, 1);
-}
+  background-color: rgba(248, 184, 175, 1);}
 .velkommen__knapper, .udvalgteprojekter__knap {
-padding: 5%;
-}
+padding: 5%;}
 .udvalgteprojekter__knap {
-  grid-column: 2;
-}
+  grid-column: 2;}
 .kompetencer__knap {
   grid-column: 1 / 6;
   grid-row: 3;
-  padding: 2%;
-}
+  padding: 2%;}
+
 
 /* Andet */
 .udvalgteprojekter__title {
-  grid-column: 1 / 4;
-}
+  grid-column: 1 / 4;}
 .ervietmatch__container p {
-  text-align: center;
-}
+  text-align: center;}
 .merenysgerrig__container p{
-  text-align: center;
-}
+  text-align: center;}
 .socialemedier__container p {
-  grid-row: 2 / 4;
-}
+  grid-row: 2 / 4;}
 @keyframes play-desktop {
   0% {background-position: 0px;}
-  100% {background-position: -7500px;}
-}
+  100% {background-position: -7500px;}}
 @keyframes play-mobil {
   0% {background-position: 0px;}
-  100% {background-position: -4500px;}
-}
+  100% {background-position: -4500px;}}
 .kompetencer__title {
   grid-column: 1 / 6;
-  grid-row: 1;
+  grid-row: 1;}
 
-}
 
-/* MEDIA QUERIES */
+  /* MEDIA QUERIES */
 @media (max-width: 768px) {
   /* Skrift */
-  h1 {
-    font-size: 50px;
-  }
-  h2, h3 {
-    font-size: 36px;
-  }
-  p {
-    font-size: 16px;
-  }
+  h1 {font-size: 50px;}
+  h2, h3 {font-size: 36px;}
+  p {font-size: 16px;}
 
+  
   /* Knapper */
   .knap {
     width: 120px;
     padding: 10px;
-    font-size: 16px;
-  }
+    font-size: 16px;}
    .velkommen__knapper {
-    padding: 0%;
-  } 
+    padding: 0%;} 
   .udvalgteprojekter__knap {
     grid-column: 1;
     grid-row: 5;
-    padding: 5%;
-  }
+    padding: 5%;}
   .movingart__knap {
     grid-row: 5;
-    padding: 5%;
-  }
+    padding: 5%;}
 
-  /* Footer */
+
+    /* Footer */
   .footer__container {
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     text-align: center;
-    padding-top: 5%;
-  }
+    padding-top: 5%;}
   .footer__info {
-    grid-row: 2;
-  }
+    grid-row: 2;}
   .footer__info p {
-    text-align: center;
-  }
+    text-align: center;}
   .footer__genveje {
-    justify-self: center;
-  }
+    justify-self: center;}
   .footer__genveje ul {
     grid-auto-flow: row;
     text-align: center;
     gap: 30px;
-    width: 100%;
-  }
+    width: 100%;}
   .footer__genveje a {
-    font-size: 18px;
-  }
+    font-size: 18px;}
 
-  /* Navigation */
+  
+    /* Navigation */
   .nav__menulinje--item {
-    display: none;
-  }
+    display: none;}
   .nav__menulinje--knap {
-    display: block;
-  }
+    display: block;}
 
-  /* Containere */
+  
+    /* Containere */
   .velkommen__container, 
   .udvalgteprojekter__container, 
   .ervietmatch__container, 
@@ -411,12 +346,11 @@ padding: 5%;
   {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    padding: 2% 2% 0 2%;
-  }
+    padding: 2% 2% 0 2%;}
   .kompetencer__container {
-    grid-template-columns: 1fr 1fr;
-  }
+    grid-template-columns: 1fr 1fr;}
 
+   
    /* Billeder */
    .udvalgteprojekter__billede2, 
    .socialemedier__billede, 
@@ -426,68 +360,55 @@ padding: 5%;
    .illustratorportraet__billede, 
    .hvemerjeg__billede {
      grid-column: 1;
-     grid-row: 3;
-   }
+     grid-row: 3;}
    .udvalgteprojekter__billede3, 
    .movingart__video, 
    .kontakt__billede {
      grid-column: 1;
-     grid-row: 4;
-   }
+     grid-row: 4; }
    .udvalgteprojekter__billede1, 
    .kompetencer__illustrator {
      grid-column: 1;
-     grid-row: 2;
-   } 
+     grid-row: 2;} 
   .velkommen__billede {
     grid-column: 1;
-    grid-row: 4;
-  }
+    grid-row: 4;}
   .ervietmatch__billede {
     grid-column: 1;
-    grid-row: 6;
-  }
+    grid-row: 6;}
   .kompetencer__indesign {
     grid-column: 2;
-    grid-row: 2;
-  }
+    grid-row: 2;}
   .kompetencer__photoshop {
     grid-column: 1;
-    grid-row: 3;
-  }
+    grid-row: 3;}
   .kompetencer__figma {
     grid-column: 2;
-    grid-row: 3;
-  }
+    grid-row: 3;}
   .kompetencer__htmlcss {
     grid-column: 1 / 3;
     grid-row: 6;
-    width: 50%;
-  }
+    width: 50%;}
   .animation__animation {
     width: 290px;
     height: 290px;
     background-size: 4500px auto;
-    animation: play-mobil 3s steps(15) infinite;
-  }
+    animation: play-mobil 3s steps(15) infinite;}
   .merenysgerrig__billede {
     grid-column: 1;
-    grid-row: 6;
-  }
+    grid-row: 6;}
 
- /* Andet */
+ 
+    /* Andet */
   .udvalgteprojekter__title {
     grid-row: 1;
-    grid-column: 1;
-  }
+    grid-column: 1;}
   .kompetencer__title {
     grid-row: 1;
-    grid-column: 1 / 3;
-  }
+    grid-column: 1 / 3;}
   .kompetencer__knap {
     grid-column: 1 / 3;
     grid-row: 7;
-    padding: 5%;
-  }
+    padding: 5%;}
 }
 
