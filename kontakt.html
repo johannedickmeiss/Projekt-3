@@ -11,25 +11,27 @@
 <body>
    
    
-    <!-- navigation -->
-    <nav class="nav">
-        <ul class="nav__sidepanel">
-            <li onclick=hideNav__sidepanel()><a href="#lukknap"><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#01408D"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="om-mig.html">Om mig</a></li>
-            <li class="nav__sidepanel--item"><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        <ul class="nav__menulinje">
-            <li class="nav__menulinje--logo"><a href="index.html"><img src="Billeder/Logo.png" alt="menulinje logo"></a></li>
-            <li class="nav__menulinje--item"><a href="index.html">Hjem</a></li>
-            <li class="nav__menulinje--item"><a href="portfolio.html">Portfolio</a></li>
-            <li class="nav__menulinje--item"><a href="om-mig.html">Om mig</a></li>
-            <li class="nav__menulinje--item"><a href="kontakt.html">Kontakt</a></li>
-            <li class="nav__menulinje--knap" onclick="showNav__sidepanel()"><a href="#menuknap">
-                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill=#01408D><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-        </ul>
-        </nav>
+<!-- navigation --> <!-- Har taget udgangspunkt i denne video https://www.youtube.com/watch?v=U8smiWQ8Seg -->
+   <nav class="nav">
+    <ul class="nav__sidepanel">
+        <li onclick=hideNav__sidepanel()><a href="#lukknap"><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#01408D"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="om-mig.html">Om mig</a></li>
+        <li class="nav__sidepanel--item"><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <ul class="nav__menulinje">
+        <li class="nav__menulinje--logo"><a href="index.html"><img src="Billeder/Logo.png" alt="menulinje logo"></a></li>
+        <li class="nav__menulinje--item"><a href="index.html">Hjem</a></li>
+        <li class="nav__menulinje--item"><a href="portfolio.html">Portfolio</a></li>
+        <li class="nav__menulinje--item"><a href="om-mig.html">Om mig</a></li>
+        <li class="nav__menulinje--item"><a href="kontakt.html">Kontakt</a></li>
+        <li class="nav__menulinje--knap" onclick="showNav__sidepanel()"><a href="#menuknap">
+            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill=#01408D><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+    </nav>
+
+<!-- Javascript for navigation -->
 
 <script>
     function showNav__sidepanel(){
@@ -40,9 +42,9 @@
         nav__sidepanel.style.display = 'none'}     
 </script>
 
-
 <main>
-    <!-- Forside -->
+
+<!-- Forside -->
 <section class="forside">
     <div><h1 class="forside__title">KONTAKT</h1></div>
 </section>
@@ -56,8 +58,8 @@
              bidrage til dit team, er du altid velkommen til at kontakte mig. Jeg ser frem til at høre fra dig og håber på en spændende
               mulighed for samarbejde!</p></div>
         <div class="kontakt__info">
-            <h3>Mobil: +45 31 35 28 22</h3>
-            <h3>Mail: jodi67100@edu.ucl.dk</h3>
+            <h4>Mobil: +45 31 35 28 22</h4>
+            <h4>Mail: jodi67100@edu.ucl.dk</h4>
         </div>
         <div class="kontakt__billede"><img src="Billeder/Logo.png" alt="logo"></div>
     </div> 

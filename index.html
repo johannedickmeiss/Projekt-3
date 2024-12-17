@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio DMSS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
    
-    <!-- navigation -->
-      <!-- Har taget udgangspunkt i denne video https://www.youtube.com/watch?v=U8smiWQ8Seg -->
+<!-- navigation --> <!-- Har taget udgangspunkt i denne video https://www.youtube.com/watch?v=U8smiWQ8Seg -->
     <nav class="nav">
         <ul class="nav__sidepanel">
             <li onclick=hideNav__sidepanel()><a href="#lukknap"><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#01408D"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
@@ -31,26 +30,23 @@
         </ul>
         </nav>
 
-<script>
-    function showNav__sidepanel(){
-        const nav__sidepanel = document.querySelector('.nav__sidepanel')
-        nav__sidepanel.style.display = 'flex'}
-    function hideNav__sidepanel(){
-        const nav__sidepanel = document.querySelector('.nav__sidepanel')
-        nav__sidepanel.style.display = 'none'}     
-</script>
-
-
-   
+<!-- Javascript for navigation -->
+    <script>
+        function showNav__sidepanel(){
+            const nav__sidepanel = document.querySelector('.nav__sidepanel')
+            nav__sidepanel.style.display = 'flex'}
+        function hideNav__sidepanel(){
+            const nav__sidepanel = document.querySelector('.nav__sidepanel')
+            nav__sidepanel.style.display = 'none'}     
+    </script>
       
-    <main>
+<main>
     
 <!-- Forside -->
 <section class="forside">
     <div><h1 class="forside__title">STUDIO DMSS</h1></div>
 </section>
 
-    
 <!-- Velkommen -->
  <section class="velkommen">
     <div class="container velkommen__container">
@@ -82,7 +78,6 @@
     </div>
 </section>
 
-
 <!-- Er vi et match? -->
 <section class="ervietmatch">
     <div class="container ervietmatch__container">
@@ -95,7 +90,6 @@
         <div class="ervietmatch__billede"><img src="Billeder/Logo.png" alt="logo"></div>
     </div> 
  </section>
-
 
  <!-- Footer -->
  <footer class="footer">
