@@ -130,8 +130,8 @@ p {
 }
 .footer__genveje ul {
   list-style: none;
-  display: grid; /* Bruger grid til at holde links i én række */
-  grid-auto-flow: column; /* Placerer li-elementer i en række */
+  display: grid;
+  grid-auto-flow: column;
   white-space: nowrap;
 }
 .footer__genveje a {
@@ -140,10 +140,10 @@ p {
   font-family: 'GlamourAbsolute';
   font-size: 20px;
   padding: 0 30px;
-
 }
+
 .footer__genveje--item a {
-  color: rgba(224, 84, 49, 1); /* Ændrer farven for det sidste link */
+  color: rgba(224, 84, 49, 1);
 }
 
 /* NAVIGATION */
@@ -172,6 +172,10 @@ nav a {
   font-family: 'GlamourAbsolute';
   font-size: 20px;
 }
+
+a:hover {
+  transform: scale(1.1);}
+
 nav li:first-child {
   margin-right: auto;
 }
@@ -221,7 +225,6 @@ img,
   border-radius: 0;
 }
 .velkommen__billede,
-.ervietmatch__billede,
 .socialemedier__billede,
 .produktfoto__billede,
 .redesign__billede,
@@ -259,7 +262,7 @@ img,
   background-size: 7500px auto;
   animation: play-desktop 3s steps(15) infinite;
 }
-.velkommen__billede, .kontakt__billede {
+.velkommen__billede, .kontakt__billede, .ervietmatch__billede {
   grid-column: 2;
   grid-row: 1 / 4;
   height: 100%;
@@ -280,6 +283,9 @@ img,
   margin: 2px;
   text-decoration: none; 
 }
+.knap:hover {
+  transform: scale(1.1);}
+
 .knap--speciel {
   background-color: rgba(248, 184, 175, 1);
 }
