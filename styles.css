@@ -72,6 +72,7 @@ p {
   border: 1px solid rgba(224, 84, 49, 1);
   margin: 2px;
   text-decoration: none;
+
   
 }
 .knap--speciel {
@@ -427,10 +428,9 @@ padding: 5%;
 .animation__animation {
   grid-row: 1 / 4;
   grid-column: 1;
-  width: 500px;
+  width: 495px;
   height: 500px;
-  border-radius: 50%;
-  background: url(Billeder/Animation\ Workshop.webp) 0 0 no-repeat;
+  background: url(Billeder/animationworkshop.jpg) 0 0 no-repeat;
   background-size: 7500px auto; /* Baggrundsbilledets bredde */
   animation: play-desktop 3s steps(15) infinite;
 }
@@ -451,8 +451,8 @@ padding: 5%;
   .animation__animation {
     grid-column: 1;
     grid-row: 3;
-    width: 300px; /* Mindre bredde */
-    height: 300px; /* Mindre højde */
+    width: 290px; /* Mindre bredde */
+    height: 290px; /* Mindre højde */
     background-size: 4500px auto; /* Tilpas baggrundsstørrelse */
     animation: play-mobil 3s steps(15) infinite; /* Brug mobil-keyframes */
   }
@@ -517,8 +517,8 @@ padding: 5%;
   }
 
   .movingart__knap {
-    grid-row: 3;
-    padding-bottom: 5%;
+    grid-row: 5;
+    padding: 5%;
   }
 }
 
